@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class ToggleLight : MonoBehaviour {
 
-    public Light light;
-    private bool _on = false;
+    #region Public Variables
 
-    // Use this for initialization
+    // Reference to hold the light
+    public Light light;
+
+    #endregion
+
+    #region Private Variables
+
+    // Reference for the Light on status
+    private bool _on;
+
+    #endregion
+    
+    /// <summary>
+    /// Which triggers a function based on Player's input
+    /// after verifying its Position.
+    /// </summary>
+    /// <param name="collider"></param>
     void OnTriggerStay(Collider collider) {
         // Checks for the Player, if the Key is Pressed
         // and if the Light is on or not
